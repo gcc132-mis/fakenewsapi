@@ -1,51 +1,25 @@
-# JSONServer + JWT Auth
+# FakeNewsAPI
 
-A Fake REST API using json-server with JWT authentication. 
+API REST utilizada pelo aplicativo [FakeNewsApp](https://github.com/gcc132-mis/fakenewsapp).
 
-Implemented End-points: login,register
+## Instalação
 
-## Install
+Para instalação desta API, clone este repositório, entre na pasta do projeto e execute os comandos abaixo:
 
 ```bash
 $ npm install
-$ npm run start-auth
 ```
 
-Might need to run
+Para corrigir alguns erros de versionamento, talvez, seja necessário executar o comando abaixo:
+
 ```
 npm audit fix
 ```
 
-## How to login/register?
+## Execução
 
-You can login/register by sending a POST request to
+Para colocar esta API em funcionamento, execute o comando abaixo:
 
+```bash
+$ npm run start-auth
 ```
-POST http://localhost:8000/auth/login
-POST http://localhost:8000/auth/register
-```
-with the following data 
-
-```
-{
-  "email": "nilson@email.com",
-  "password":"nilson"
-}
-```
-
-You should receive an access token with the following format 
-
-```
-{
-   "access_token": "<ACCESS_TOKEN>"
-}
-```
-
-
-You should send this authorization with any request to the protected endpoints
-
-```
-Authorization: Bearer <ACCESS_TOKEN>
-```
-
-
